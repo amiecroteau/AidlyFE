@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import {Card, Modal, Text, TextInput, TouchableHighlight, View, StyleSheet}
+import {Card, Modal, Text, TextInput, TouchableHighlight, View, StyleSheet} from 'react-native'
+import {globalStyles} from './styles/global';
 
-from 'react-native'
+
 class Login extends Component {
    state = {
       email: '',
@@ -30,18 +31,19 @@ class Login extends Component {
                onRequestClose = {() => { console.log("Modal has been closed.") } }>
                
                <View style = {styles.modal}>
-                  <Text style = {styles.titleText}>Login</Text>
+                  <Text style = {globalStyles.titleText}>Login</Text>
                   <TextInput style = {styles.input}
-               underlineColorAndroid = "#fff"
-               placeholder = "Email"
-               placeholderTextColor = "#fff"
+               underlineColorAndroid = "grey"
+               label= "Email"
+               placeholder = "Enter Email"
+               placeholderTextColor = "grey"
                autoCapitalize = "none"
                onChangeText = {this.handleEmail}/>
 
          <TextInput style = {styles.input}
-               underlineColorAndroid = "#fff"
+               underlineColorAndroid = "grey"
                placeholder = "Password"
-               placeholderTextColor = "#fff"
+               placeholderTextColor = "grey"
                autoCapitalize = "none"
                onChangeText = {this.handlePassword}/>
                   
@@ -63,11 +65,7 @@ class Login extends Component {
 export default Login
 
 const styles = StyleSheet.create ({
-   container: {
-      alignItems: 'center',
-      backgroundColor: '#FFB2AD',
-      padding: 25
-   },
+   
    modal: {
       flex: 1,
       alignItems: 'flex-start',
@@ -81,11 +79,42 @@ const styles = StyleSheet.create ({
      
    },
    input:{
-      padding:5,
+      padding:10,
+      marginTop:20,
+      color:'grey',
       fontSize:20,
-      borderColor:'#fff',
+      borderColor:'grey',
+      borderBottomColor:'grey',
+      backgroundColor:'#fff',
+      borderWidth:2,
       flex:1,
       justifyContent:'flex-start',
-    
-   }
+      maxHeight:100,
+   },
+   titleText: {
+      color: '#fff',
+      marginTop: 10,
+      fontSize:30,
+     
+   },
+paragraph: {
+  marginVertical: 8,
+  lineHeight: 20,
+},
+button:{
+  width:50,
+  marginTop:30,
+  padding:30
+},
+container: {
+  alignItems: 'center',
+  backgroundColor: '#FFB2AD',
+  padding: 25
+},
+modal: {
+  flex: 1,
+  alignItems: 'center',
+  backgroundColor: '#FFB2AD',
+  padding: 100
+},
 })
