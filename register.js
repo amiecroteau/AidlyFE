@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Modal, Text, TouchableHighlight, View, StyleSheet}
 
 from 'react-native'
-class ModalExample extends Component {
+class Register extends Component {
    state = {
       modalVisible: false,
    }
@@ -34,7 +34,7 @@ class ModalExample extends Component {
       )
    }
 }
-export default ModalExample
+export default Register
 
 const styles = StyleSheet.create ({
    container: {
@@ -52,7 +52,7 @@ const styles = StyleSheet.create ({
       color: '#fff',
       marginTop: 10,
       fontSize:30,
-      
+
      
    }
    
