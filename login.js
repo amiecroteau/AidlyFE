@@ -1,22 +1,18 @@
 import React, { Component } from 'react';
 import {Card, Modal, Text, TextInput, TouchableHighlight, View, StyleSheet} from 'react-native'
 import {globalStyles} from './styles/global';
+import {t} from 'tcomb-form-native';
 
+const Form = t.form.Form;
+const User = t.struct({
+   email: t.String,
+   username: t.String,
+   password: t.String,
+   terms: t.Boolean
+ });
 
 class Login extends Component {
-   state = {
-      email: '',
-      password: ''
-   }
-   handleEmail = (text) => {
-      this.setState({ email: text })
-   }
-   handlePassword = (text) => {
-      this.setState({ password: text })
-   }
-   login = (email, pass) => {
-      alert('email: ' + email + ' password: ' + pass)
-   }
+  
    state = {
       modalVisible: false,
    }
@@ -32,6 +28,10 @@ class Login extends Component {
                
                <View style = {styles.modal}>
                   <Text style = {globalStyles.titleText}>Login</Text>
+                  <View style={styles.container}>
+        <Form type={User} /> {/* Notice the addition of the Form component */}
+      </View>
+                 
                   <TextInput style = {styles.input}
                underlineColorAndroid = "grey"
                label= "Email"

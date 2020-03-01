@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import Login from './login'
 import Register from './register'
 
+
 const Home = () => {
    return (
      <View style={styles.containter}>
