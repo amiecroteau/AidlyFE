@@ -1,23 +1,49 @@
 import React, { Component } from 'react';
-import { Modal, Text, TextInput, TouchableHighlight, View, StyleSheet}
+import {Card, Modal, Text, TextInput, TouchableHighlight, View, StyleSheet}
 
 from 'react-native'
-class ModalExample extends Component {
+class Login extends Component {
+   state = {
+      email: '',
+      password: ''
+   }
+   handleEmail = (text) => {
+      this.setState({ email: text })
+   }
+   handlePassword = (text) => {
+      this.setState({ password: text })
+   }
+   login = (email, pass) => {
+      alert('email: ' + email + ' password: ' + pass)
+   }
    state = {
       modalVisible: false,
    }
    toggleModal(visible) {
       this.setState({ modalVisible: visible });
    }
-   render() {
+   render(props) {
       return (
-         <View style = {styles.container}>
+         <View style = {styles.container}>                                                                                                          
             <Modal animationType = {"slide"} transparent = {false}
                visible = {this.state.modalVisible}
                onRequestClose = {() => { console.log("Modal has been closed.") } }>
                
                <View style = {styles.modal}>
-                  <Text style = {styles.text}>Modal is open!</Text>
+                  <Text style = {styles.titleText}>Login</Text>
+                  <TextInput style = {styles.input}
+               underlineColorAndroid = "#fff"
+               placeholder = "Email"
+               placeholderTextColor = "#fff"
+               autoCapitalize = "none"
+               onChangeText = {this.handleEmail}/>
+
+         <TextInput style = {styles.input}
+               underlineColorAndroid = "#fff"
+               placeholder = "Password"
+               placeholderTextColor = "#fff"
+               autoCapitalize = "none"
+               onChangeText = {this.handlePassword}/>
                   
                   <TouchableHighlight onPress = {() => {
                      this.toggleModal(!this.state.modalVisible)}}>
@@ -34,7 +60,7 @@ class ModalExample extends Component {
       )
    }
 }
-export default ModalExample
+export default Login
 
 const styles = StyleSheet.create ({
    container: {
@@ -44,13 +70,22 @@ const styles = StyleSheet.create ({
    },
    modal: {
       flex: 1,
-      alignItems: 'center',
+      alignItems: 'flex-start',
       backgroundColor: '#FFB2AD',
       padding: 100
    },
    titleText: {
       color: '#fff',
       marginTop: 10,
-      fontSize:40,
+      fontSize:70,
+     
+   },
+   input:{
+      padding:5,
+      fontSize:20,
+      borderColor:'#fff',
+      flex:1,
+      justifyContent:'flex-start',
+    
    }
 })
