@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Modal, Text, TouchableHighlight, View, StyleSheet}
+import { Modal, TextInput, Text, TouchableHighlight, View, StyleSheet}
 
 from 'react-native'
 class ModalExample extends Component {
@@ -11,25 +11,60 @@ class ModalExample extends Component {
    }
    render() {
       return (
-         <View style = {styles.container}>
+         <View style = {styles.container}>                                                                                                          
             <Modal animationType = {"slide"} transparent = {false}
                visible = {this.state.modalVisible}
                onRequestClose = {() => { console.log("Modal has been closed.") } }>
                
                <View style = {styles.modal}>
-                  <Text style = {styles.text}>Modal is open!</Text>
+                  <Text style = {styles.titleText}>Register</Text>
+               
+               <TextInput style = {styles.input}
+               underlineColorAndroid = "grey"
+               label= "First_Name"
+               placeholder = "First Name"
+               placeholderTextColor = "grey"
+               autoCapitalize = "none"
+              />
+
+               <TextInput style = {styles.input}
+               underlineColorAndroid = "grey"
+               label= "Last_Name"
+               placeholder = "Last Name"
+               placeholderTextColor = "grey"
+               autoCapitalize = "none"
+              />
+
+               <TextInput style = {styles.input}
+               underlineColorAndroid = "grey"
+               label= "Zip_Code"
+               placeholder = "Zip Code"
+               placeholderTextColor = "grey"
+               autoCapitalize = "none"
+               /> 
+
+               <TextInput style = {styles.input}
+               underlineColorAndroid = "grey"
+               label= "Phone_Number"
+               placeholder = "Phone Number"
+               placeholderTextColor = "grey"
+               autoCapitalize = "none"
+               />    
                   
                   <TouchableHighlight onPress = {() => {
                      this.toggleModal(!this.state.modalVisible)}}>
                      
                      <Text style = {styles.text}>Close Modal</Text>
                   </TouchableHighlight>
+                  
+                  <TouchableHighlight onPress = {() => {this.toggleModal(true)}}>
+               <Text style = {styles.titleText}>Submit</Text>
+            </TouchableHighlight>
                </View>
+              
             </Modal>
             
-            <TouchableHighlight onPress = {() => {this.toggleModal(true)}}>
-               <Text style = {styles.titleText}>Register</Text>
-            </TouchableHighlight>
+           
          </View>
       )
    }
@@ -53,6 +88,45 @@ const styles = StyleSheet.create ({
       marginTop: 10,
       fontSize:30,
      
-   }
+   },
+   input:{
+      padding:10,
+      marginTop:20,
+      color:'grey',
+      fontSize:20,
+      borderColor:'grey',
+      borderBottomColor:'grey',
+      backgroundColor:'#fff',
+      borderWidth:2,
+      flex:1,
+      justifyContent:'flex-start',
+      maxHeight:100,
+   },
+   titleText: {
+      color: '#fff',
+      marginTop: 10,
+      fontSize:30,
+     
+   },
+paragraph: {
+  marginVertical: 8,
+  lineHeight: 20,
+},
+button:{
+  width:50,
+  marginTop:30,
+  padding:30
+},
+container: {
+  alignItems: 'center',
+  backgroundColor: '#FFB2AD',
+  padding: 25
+},
+modal: {
+  flex: 1,
+  alignItems: 'center',
+  backgroundColor: '#FFB2AD',
+  padding: 100
+},
    
 })

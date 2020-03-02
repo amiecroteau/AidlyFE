@@ -5,7 +5,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Text>Feed</Text>
-    
+      <Text>Past Opportunities</Text>
+      <Text>Upcoming Opportunities</Text>
+
     </View>
   );
 }

@@ -31,7 +31,7 @@ class Login extends Component {
                onRequestClose = {() => { console.log("Modal has been closed.") } }>
                
                <View style = {styles.modal}>
-                  <Text style = {globalStyles.titleText}>Login</Text>
+                  <Text style = {styles.titleText}>Login</Text>
                   <TextInput style = {styles.input}
                underlineColorAndroid = "grey"
                label= "Email"
@@ -52,12 +52,14 @@ class Login extends Component {
                      
                      <Text style = {styles.text}>Close Modal</Text>
                   </TouchableHighlight>
+                  <TouchableHighlight onPress = {() => {this.toggleModal(true)}}>
+               <Text style = {styles.titleText}>Submit</Text>
+            </TouchableHighlight> 
                </View>
+              
             </Modal>
             
-            <TouchableHighlight onPress = {() => {this.toggleModal(true)}}>
-               <Text style = {styles.titleText}>Login</Text>
-            </TouchableHighlight>
+           
          </View>
       )
    }
