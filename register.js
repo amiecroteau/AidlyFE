@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Modal, TextInput, Text, TouchableHighlight, View, StyleSheet}
+import { Modal, TextInput, Text, TouchableHighlight, View, StyleSheet} 
+from 'react-native';
+import Slider from '@react-native-community/slider'
 
 
-from 'react-native'
 class ModalExample extends Component {
    state = {
       modalVisible: false,
@@ -20,9 +21,7 @@ class ModalExample extends Component {
                onRequestClose = {() => { console.log("Modal has been closed.") } }>
                   <Text style = {styles.titleText}>Register</Text>  
                
-               <View style = {styles.modal}>
-                  <Text style = {styles.titleText}>Register</Text>
-               
+              
                <TextInput style = {styles.input}
                underlineColorAndroid = "grey"
                label= "First_Name"
@@ -30,7 +29,13 @@ class ModalExample extends Component {
                placeholderTextColor = "grey"
                autoCapitalize = "none"
               />
-
+<Slider
+    style={{width: 200, height: 40}}
+    minimumValue={0}
+    maximumValue={1}
+    minimumTrackTintColor="#FFFFFF"
+    maximumTrackTintColor="#000000"
+  />
                <TextInput style = {styles.input}
                underlineColorAndroid = "grey"
                label= "Last_Name"
@@ -72,7 +77,7 @@ class ModalExample extends Component {
                onChangeText = {this.handlePassword}/>
                <View>
                    
-  </View> 
+  
                   <TouchableHighlight onPress = {() => {
                      this.toggleModal(!this.state.modalVisible)}}>
                      
