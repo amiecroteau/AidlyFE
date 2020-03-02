@@ -1,3 +1,5 @@
+
+  
 import React, { Component } from 'react';
 import {Card, Modal, Text, TextInput, TouchableHighlight, View, StyleSheet} from 'react-native'
 import {globalStyles} from './styles/global';
@@ -58,6 +60,9 @@ class Login extends Component {
                </View>
               
             </Modal>
+            <TouchableHighlight onPress = {() => {this.toggleModal(true)}}>
+               <Text style = {styles.titleText}>Login</Text>
+            </TouchableHighlight>
             
            
          </View>

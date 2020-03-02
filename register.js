@@ -11,10 +11,13 @@ class ModalExample extends Component {
    }
    render() {
       return (
-         <View style = {styles.container}>                                                                                                          
+         
+         <View style = {styles.container}>       
+                                                                                                          
             <Modal animationType = {"slide"} transparent = {false}
                visible = {this.state.modalVisible}
                onRequestClose = {() => { console.log("Modal has been closed.") } }>
+                  <Text style = {styles.titleText}>Register</Text>  
                
                <View style = {styles.modal}>
                   <Text style = {styles.titleText}>Register</Text>
@@ -63,7 +66,9 @@ class ModalExample extends Component {
                </View>
               
             </Modal>
-            
+            <TouchableHighlight onPress = {() => {this.toggleModal(true)}}>
+               <Text style = {styles.titleText}>Register</Text>
+            </TouchableHighlight>
            
          </View>
       )
