@@ -56,7 +56,7 @@ class ModalExample extends Component {
                      
                      <Text style = {styles.text}>Close Modal</Text>
                   </TouchableHighlight>
-                  
+
                   <TouchableHighlight onPress = {() => {this.toggleModal(true)}}>
                <Text style = {styles.titleText}>Submit</Text>
             </TouchableHighlight>
@@ -74,13 +74,13 @@ export default ModalExample
 const styles = StyleSheet.create ({
    container: {
       alignItems: 'center',
-      backgroundColor: '#FFB2AD',
+      backgroundColor: '#94F1C1',
       padding: 25
    },
    modal: {
       flex: 1,
       alignItems: 'center',
-      backgroundColor: '#FFB2AD',
+      backgroundColor: '#94F1C1',
       padding: 100
    },
    titleText: {
@@ -119,13 +119,13 @@ button:{
 },
 container: {
   alignItems: 'center',
-  backgroundColor: '#FFB2AD',
+  backgroundColor: '#94F1C1',
   padding: 25
 },
 modal: {
   flex: 1,
   alignItems: 'center',
-  backgroundColor: '#FFB2AD',
+  backgroundColor: '#94F1C1',
   padding: 100
 },
    

@@ -71,7 +71,7 @@ const styles = StyleSheet.create ({
    modal: {
       flex: 1,
       alignItems: 'flex-start',
-      backgroundColor: '#FFB2AD',
+      backgroundColor: '#94F1C1',
       padding: 100
    },
    titleText: {
@@ -110,13 +110,13 @@ button:{
 },
 container: {
   alignItems: 'center',
-  backgroundColor: '#FFB2AD',
+  backgroundColor: '#94F1C1',
   padding: 25
 },
 modal: {
   flex: 1,
   alignItems: 'center',
-  backgroundColor: '#FFB2AD',
+  backgroundColor: '#94F1C1',
   padding: 100
 },
 })
