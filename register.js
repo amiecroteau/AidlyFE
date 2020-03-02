@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Modal, TextInput, Text, TouchableHighlight, View, StyleSheet}
 
+
 from 'react-native'
 class ModalExample extends Component {
    state = {
@@ -52,8 +53,26 @@ class ModalExample extends Component {
                placeholder = "Phone Number"
                placeholderTextColor = "grey"
                autoCapitalize = "none"
-               />    
-                  
+               />  
+
+ 
+                  <TextInput style = {styles.input}
+               underlineColorAndroid = "grey"
+               label= "Email"
+               placeholder = "Enter Email"
+               placeholderTextColor = "grey"
+               autoCapitalize = "none"
+               onChangeText = {this.handleEmail}/>
+
+         <TextInput style = {styles.input}
+               underlineColorAndroid = "grey"
+               placeholder = "Password"
+               placeholderTextColor = "grey"
+               autoCapitalize = "none"
+               onChangeText = {this.handlePassword}/>
+               <View>
+                   
+  </View> 
                   <TouchableHighlight onPress = {() => {
                      this.toggleModal(!this.state.modalVisible)}}>
                      
