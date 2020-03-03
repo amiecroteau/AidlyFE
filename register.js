@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Modal, TextInput, Text, TouchableHighlight, View, StyleSheet} 
 from 'react-native';
-import Slider from '@react-native-community/slider'
+
+
+
 
 
 class ModalExample extends Component {
@@ -29,13 +31,7 @@ class ModalExample extends Component {
                placeholderTextColor = "grey"
                autoCapitalize = "none"
               />
-<Slider
-    style={{width: 200, height: 40}}
-    minimumValue={0}
-    maximumValue={1}
-    minimumTrackTintColor="#FFFFFF"
-    maximumTrackTintColor="#000000"
-  />
+
                <TextInput style = {styles.input}
                underlineColorAndroid = "grey"
                label= "Last_Name"

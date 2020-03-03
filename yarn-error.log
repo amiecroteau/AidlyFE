@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files (x86)\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add rn-range-slider
+  C:\Program Files (x86)\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add --dev @expo/webpack-config
 
 PATH: 
   C:\Python38\Scripts\;C:\Python38\;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;c:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Brackets\command;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files (x86)\nodejs\;C:\ProgramData\chocolatey\bin;C:\Users\rockstarmom1\AppData\Local\Microsoft\WindowsApps;C:\Users\rockstarmom1\AppData\Local\Microsoft\WindowsApps;C:\Users\rockstarmom1\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\rockstarmom1\AppData\Local\Yarn\bin;C:\Program Files\Java\jdk-11.0.2\bin;C:\Dev\Ant\bin;c:\Dev\Netbeans\Bin;C:\flutter\flutter\bin;C:\Users\rockstarmom1\AppData\Roaming\npm
@@ -14,7 +14,7 @@ Platform:
   win32 ia32
 
 Trace: 
-  Error: EPERM: operation not permitted, unlink 'C:\project\AidlyFE\node_modules\@react-native-community\cli-tools\node_modules\.bin'
+  Error: EPERM: operation not permitted, unlink 'C:\project\AidlyFE\node_modules\@babel\compat-data\node_modules\.bin'
 
 npm manifest: 
   {
@@ -28,6 +28,7 @@ npm manifest:
     },
     "dependencies": {
       "@hapi/joi": "^17.1.0",
+      "@react-native-community/slider": "^2.0.8",
       "expo": "~36.0.0",
       "react": "~16.9.0",
       "react-dom": "~16.9.0",
@@ -1170,6 +1171,11 @@ Lockfile:
       sudo-prompt "^9.0.0"
       wcwidth "^1.0.1"
       ws "^1.1.0"
+  
+  "@react-native-community/slider@^2.0.8":
+    version "2.0.8"
+    resolved "https://registry.yarnpkg.com/@react-native-community/slider/-/slider-2.0.8.tgz#c4a3c342638270e0adc942b51427ec17104a786d"
+    integrity sha512-FZC3wjYzHQiD7jT7ALy3QNccyLj9zQBRiKGBFr/QvrWLkVg5orpIJ53aYFXm3eOkNvUV+wjhoI9uCkh3LCN2+A==
   
   "@types/color-name@^1.1.1":
     version "1.1.1"
